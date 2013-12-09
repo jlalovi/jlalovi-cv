@@ -1,47 +1,42 @@
 @font-face {
-	font-family: 'fredokaone';
-	src: url('../font/fredokaone.eot');
-	src: url('../font/fredokaone.eot#iefix'),
-		 url('../font/fredokaone.ttf');
+	font-family: 'anudaw';
+	src: url('../font/anudaw.eot');
+	src: url('../font/anudaw.eot#iefix'),
+		 url('../font/anudaw.ttf');
 	font-weight: bold;
 	font-style: normal;
 }
 @font-face {
-	font-family: 'leaguegothic';
-	src: url('../font/leaguegothic.eot');
-	src: url('../font/leaguegothic.eot#iefix'),
-		 url('../font/leaguegothic.woff'),
-		 url('../font/leaguegothic.ttf');
+	font-family: 'Amaranth-Italic';
+	src: url('../font/Amaranth-Italic.eot');
+	src: url('../font/Amaranth-Italic.eot#iefix'),
+		 url('../font/Amaranth-Italic.ttf');
 	font-weight: bold;
 	font-style: normal;
 }
 body {
-	background: #e6e2d8 url("../img/ricepaper_v3.png");
+	background: #fff;
 	font-family: Arial, Helvetica, sans-serif;
 }
 a {
 	text-decoration: none;
 }
 h1, h2, h3{
-	font-family: 'leaguegothic';
+	font-family: 'Amaranth-Italic';
 }
 h2 {
-	font-size: 50px;
-	color: #666;
+	font-size: 40px;
+	color: #34528e;
 	text-align: center;
-	text-transform: uppercase;
+	text-transform: lowercase;
 	letter-spacing: 1px;
 }
+	h2 span {
+		text-transform: uppercase;
+	}
 h3 {
 	font-size: 30px;
 	margin: 15px 0;
-}
-hr {
-	margin: 15px 10px 0 0;
-	height: 1px;
-	border-top: 1px solid #c2bda7;
-	border-bottom: 1px solid #fcf7f1;
-	background-color: #e1dbcb;
 }
 
 .horizontal-list { /*Para ahorrar espacio en las listas horizontales junto con .horizontal-list li {float:left;}*/
@@ -73,7 +68,7 @@ hr {
 **********************************/
 #navigation {
 	position: fixed;
-	background: #000;
+	background: #93C12F;
 	opacity: 0.8;
 	left: 15px;
 	bottom: 15px;
@@ -82,17 +77,12 @@ hr {
 	cursor: pointer;
 	z-index: 10;
 }
-	#navigation .logo {
-		width: 70px;
-		height: 70px;
-		padding: 10px 12px 0 12px;
-	}
-	#navigation .type-logo {
-		margin:0;
+	#navigation .main-logo {
+		color: #000;
+		font-size: 16px;
+		font-family: 'anudaw';
+		margin: 12px 0;
 		text-align: center;
-		color: #fff;
-		padding-bottom: 5px;
-		letter-spacing: 0;
 	}
 	.menu {
 		height: 0px; /* Efecto CSS más recomendable (para evitar jQuery) para slideToggle. Esto va junto al hover más adelante */
@@ -105,17 +95,18 @@ hr {
 	}
 		#navigation #navigation-menu.show-menu,
 		#navigation:hover .menu { /*Para hacer hover sobre #navigation y el efecto en .menu*/
-			height: 292px;
+			height: 282px;
 		}	
 		.menu a {
 			padding: 15px 5px; /*Height defined with padding*/
 			border-top: solid 1px #555;
-			color: #fff;
-			font-size: 15px;
+			color: #000;
+			font-weight: bold;
+			font-size: 14px;
 			display: block;
 		}
 			.menu a:hover {
-				background: #222120;
+				background: #83AC2A;
 			}
 
 /********************************
@@ -124,14 +115,25 @@ hr {
 #header {
 	padding: 15px 0;
 	margin: 0 15px;
+	background: #3a5792;
+	border: 1px solid;
+	border-bottom-right-radius: 50px;
+	border-bottom-left-radius: 100px;
 	position: relative;
 }
 	#header p {
-		color: #6b6860;
+		color: #fff;
 		font-size: 16px;
 		margin: 0;
-		line-height: 100%; /* Toma la altura de fuente establecida, en este caso de 16px; El efecto es que quedan más juntas sin necesidad de padding */
+		padding-left: 70px;
+		line-height: 100%; 
 	}
+	#header .email {
+		color: #fff;
+	}
+		.email:hover {
+			text-decoration: underline;
+		}
 	.social {
 		position: absolute;
 		right: 10px;
@@ -142,7 +144,8 @@ hr {
 			height: 32px;
 			font-size: 20px;
 			text-align: center;
-			background: #62615d;
+			background: #98854f;
+			border: 1px solid;
 			border-radius: 100%;
 			margin-left: 10px;
 			position: relative;
@@ -150,10 +153,10 @@ hr {
 			transition: background .3s;
 		}
 			.social li:hover {
-				background: #474643;
+				background: #867843;
 			}			
 			.social a {
-				color: #e9e5db;
+				color: #fff;
 				position: absolute;
 				top: 6px;
 				left: 6px;
@@ -166,27 +169,21 @@ hr {
 	margin-top: 50px;
 	height: 100%;		
 }
-	#intro .logo {
-		width: 310px;
-		height: 310px;
-		margin: 0 auto;
-		display: block; /*Las imágenes son inline, por lo que para que funcione el margin 0-auto, el display tiene que ser block*/
+	#intro .main-logo {
+		font-size: 110px;
+		font-family: 'anudaw';
+		letter-spacing: 10px;
+		text-align: center;
+		margin: 150px 0 50px;
+
 	}
 	.type-logo {
-		font-family: 'fredokaone';
-		letter-spacing: -1px;
-	}
-	.type-logo span {
-		font-family: Arial, sans-serif;
-	}
-	#intro .type-logo {
-		color: #15120b;
-		font-size: 85px;
+		
+		font-size: 30px;
+		color: #000;
 		text-align: center;
-		margin: 20px 0;
-	}
-	#intro .type-logo span {
-		color: #9e8756;
+		margin: 0 0 100px;
+		text-transform: uppercase;
 	}
 
 /********************************
@@ -201,16 +198,19 @@ hr {
 	margin-top: 150px; 
 }
  #cover-letter a, #cover-letter strong {
- 	color: #111;
+ 	color: #2D477B;
 	font-weight: bold;
  }
+ 	#cover-letter a:hover {
+ 		text-decoration: underline;
+ 	}
 
 /********************************
            SKILLS
 **********************************/
 #skills {
 	width: 960px;
-	margin-bottom: 350px;
+	margin-bottom: 350px;	
 }
 #skills h2 {
 	margin-bottom: 60px;
@@ -239,14 +239,14 @@ hr {
 		height: 140px;
 		float: left;
 		margin: 5px;
-		color: #333;
-		background: #dfd9ce;
+		color: #222;
+		background: #abd450;
 		position: relative;
 		-webkit-transition: background .3s;
 		transition: background .3s;
 	}
 		.resources-box:hover {
-			background: #CBC1AF;
+			background: #93C12F;
 		}
 		.resources-box p {
 			font-size: 14px;
@@ -273,40 +273,46 @@ hr {
 	width: 800px;
 }
 	.time-done {
-		font-size: 22px;
+		font-size: 22px;		
 		padding-top: 50px;
 	}
+		#timer {
+			color: #2D477B;
+		}
 	.project-button {
 		float: left;
 		width: 350px;
 		margin: 20px;
 		padding: 10px 0;
-		background: #333;
-		color: #D5CDBE;
+		background: -webkit-linear-gradient(top, #5170ae, #35538f);
+		color: #fff;
 		font-size: 40px;
-		border: solid 5px #CBC1AF;
+		border: solid 1px #000;
 		border-radius: 15px;
 		-webkit-transition: background .3s;
         transition: background .3s;
 	}
 		.project-button:hover {
-			background: #111;
+			background: -webkit-linear-gradient(top, #415A8B, #273C68);
 		}
 		.project-button span {
 			padding: 0 25px 0 40px;
 		}
 	#projects h3 {
 		padding-top: 100px;
+		color: #34528e;
 	}
 	.popular-project{
 		width: 370px;
 		float: left;
-		margin-right: 14px;
+		margin-right: 12px;
 		padding: 0 0 20px 14px;
-		background: #dfd9ce;	
+		border: 2px solid #000;
+		border-radius: 10px;
 	}
 		.popular-project h4 {
 			text-align: center;
+			color: #34528e;
 		}				
 		.popular-project img, .popular-project p {
 			float: left;
@@ -316,7 +322,7 @@ hr {
 			padding: 10px 20px 0;
 		}
 		.popular-project a {
-			color: #222;
+			color: #34528e;
 			font-weight: bold;
 		}
 		.popular-project a:hover {
@@ -338,7 +344,7 @@ hr {
 	}
 	#contact a {
 		font-size: 50px;
-		color: #660022;
+		color: #34528e;
 	}
 	#contact p {
 		font-size: 40px;
@@ -349,12 +355,16 @@ hr {
  	MEDIA QUERIES
  *********************/
 @media (max-width: 1280px) {
-	#intro .logo {
-			width: 270px;
-			height: 270px;
+	
+	h2 {
+		font-size: 30px;
+	}
+
+	#intro .main-logo {
+			font-size: 100px; 
 		}
 	#intro .type-logo {
-			font-size: 70px;
+			font-size: 25px;
 		}
 	#resources {
 		width: 940px;
@@ -398,14 +408,13 @@ hr {
 }
 
 @media (max-width: 765px) { 
-	#intro .logo {
-		width: 240px;
-		height: 240px;
-		margin-top: 40px;
+
+	#intro .main-logo {
+			font-size: 90px; 
 		}
-	hr {
-		display: none;
-	}
+	#intro .type-logo {
+			font-size: 20px;
+		}
 	#header p {
 		text-align: center;		
 	}
@@ -428,6 +437,10 @@ hr {
 }
 
 @media (max-width: 635px) { 
+
+	#intro .main-logo {
+			font-size: 65px; 
+		}
 	#cover-letter {
 		width: 400px;	
 	}
@@ -437,15 +450,6 @@ hr {
 	#contact {
 		width: 300px;
 	}
-}
-
-@media (max-width: 635px) { 
-	#skills {
-		width: 240px;
-	}
-}
-
-@media (max-width: 635px) { 
 	#skills {
 		width: 240px;
 		margin: 0 auto;
@@ -453,8 +457,15 @@ hr {
 }
 
 @media (max-width: 500px) { 
+	#intro {
+		padding-bottom: 40px;
+		margin: 0;
+	}
+	#intro .type-logo {
+		margin: 0;
+	}
 	h2 {
-		font-size: 40px;
+		font-size: 28px;
 	}
 	#projects {
 		width: 320px
@@ -482,7 +493,7 @@ hr {
 				margin: 0;
 				padding: 10px 0 0;
 			}
-	#intro,
+	
 	#cover-letter,
 	#skills,
 	#resources,
@@ -505,6 +516,19 @@ hr {
 	#navigation {
 		display: none;
 	}
+	#header {
+		border-bottom-left-radius: 30px;
+	}
+	#header p {
+		padding: 0;
+		font-size: 14px;
+	}
+	#intro .main-logo {
+			font-size: 50px; 
+		}
+	#intro .type-logo {
+			font-size: 18px;
+		}
 	#intro,
 	#cover-letter,
 	#skills,
@@ -513,7 +537,11 @@ hr {
 	#projects {
 		margin: 0 auto;
 		float: none;		
-	}	
+	}
+	#skills .horizontal-list li {
+		float: none;
+	}
+		
 }
 
 @media (max-height: 700px) {

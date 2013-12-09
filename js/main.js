@@ -19,26 +19,28 @@ function toggleMenuClass() {
 }
 
 function toggleMenu() {
-  $("#navigation .logo").click(toggleMenuClass);
+  $("#navigation .main-logo").click(toggleMenuClass);
 }
 
 // SCROLL
 
-$('#home-btn').click(function(){
-  $.scrollTo( '#header', 800 );
-});
-$('#cover-letter-btn').click(function(){
-  $.scrollTo( '#cover-letter', 800 );
-});
-$('#skills-btn').click(function(){
-  $.scrollTo( '#skills', 800 );
-});
-$('#resources-btn').click(function(){
-  $.scrollTo( '#resources', 800 );
-});
-$('#projects-btn').click(function(){
-  $.scrollTo( '#projects', 800 );
-});
-$('#contact-btn').click(function(){
-  $.scrollTo( '#contact', 800 );
+$(document).ready(function(){
+  $('#home-btn').click(function(){
+    $.scrollTo( '#header', 800 );
+  });
+  $('#cover-letter-btn').click(function(){
+    $.scrollTo( '#cover-letter', 800 );
+  });
+  $('#skills-btn').click(function(){
+    $.scrollTo( '#skills', 800 );
+  });
+  $('#resources-btn').click(function(){
+    $.scrollTo( '#resources', 800 );
+  });
+  $('#projects-btn').click(function(){
+    $.scrollTo( '#projects', 800 );
+  });
+  $('#contact-btn').click(function(){
+    $.scrollTo( '#contact', 800 );
+  });
 });
