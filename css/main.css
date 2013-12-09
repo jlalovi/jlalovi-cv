@@ -310,7 +310,7 @@ h3 {
 		float: left;
 		margin-right: 12px;
 		padding: 0 0 20px 14px;
-		border: 2px solid #000;
+		border: 2px solid #ccc;
 		border-radius: 10px;
 	}
 		.popular-project h4 {
